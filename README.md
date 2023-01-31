@@ -46,8 +46,8 @@ Se apareceu as seguinte mensagem:
 - http://localhost:8080/
 - 'ipv4 ou ipv6'
 
-Tudo certo, o servidor está rodando (não feche o terminal), agora copie o seu ipv4 que apareceu, e se for o ipv6,
-através do comando ipconfig/all no temrinal é possivel resgatar o ipv4.
+Tudo certo, o servidor está rodando (não feche o terminal), agora copie o seu ipv4 que apareceu.Caso apareceu o o ipv6,
+através do comando ipconfig/all no terminal é possivel resgatar o ipv4.
 Com o Ipv4 na mão, em person_repository.dart no diretório (app/data/repository/person_repository.dart), na linha
 8 substitua o ip existente pelo seu.
 
