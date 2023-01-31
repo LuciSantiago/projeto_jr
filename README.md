@@ -28,8 +28,8 @@ Se você tiver utilizando o vscode, abra o projeto com o seguinte comando:
 ```
 code .
 ```
-Caso contrário, não feche o terminal e abra o projeto na sua ide e volte ao terminal
-Rode o comando para instalar o Json_rest_server:
+Caso contrário, não feche o terminal e abra o projeto na sua ide e volte ao terminal e
+rode o comando para instalar o Json_rest_server:
 ```
 dart pub global activate json_rest_server
 ```
