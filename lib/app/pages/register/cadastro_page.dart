@@ -5,6 +5,7 @@ import 'package:projeto_jr/app/ui/responsive.dart';
 import 'package:projeto_jr/app/ui/widgets/button_custom.dart';
 import 'package:projeto_jr/app/ui/widgets/height_space.dart';
 import 'package:projeto_jr/app/ui/widgets/input_form.dart';
+import 'package:validatorless/validatorless.dart';
 
 import '../../data/controllers/home_controller.dart';
 
@@ -53,6 +54,7 @@ class _CadastroPageState extends State<CadastroPage> {
                     children: [
                       HeightSpace(),
                       InputForm(
+                        validator: Validatorless.required('Campo obrigatório'),
                         inputFormatters: [controller.maskName],
                         controller: _nomeEC,
                         width: width,
@@ -60,6 +62,7 @@ class _CadastroPageState extends State<CadastroPage> {
                       ),
                       HeightSpace(),
                       InputForm(
+                        validator: Validatorless.required('Campo obrigatório'),
                         inputType: TextInputType.number,
                         inputFormatters: [controller.maskCpf],
                         controller: _documentoEC,
@@ -68,6 +71,7 @@ class _CadastroPageState extends State<CadastroPage> {
                       ),
                       HeightSpace(),
                       InputForm(
+                        validator: Validatorless.required('Campo obrigatório'),
                         controller: _dataNascimentoEC,
                         inputType: TextInputType.number,
                         width: width,
@@ -76,12 +80,14 @@ class _CadastroPageState extends State<CadastroPage> {
                       ),
                       HeightSpace(),
                       InputForm(
+                        validator: Validatorless.required('Campo obrigatório'),
                         controller: _emailEC,
                         width: width,
                         label: 'E-mail',
                       ),
                       HeightSpace(),
                       InputForm(
+                        validator: Validatorless.required('Campo obrigatório'),
                         controller: _telefoneEC,
                         inputFormatters: [controller.maskPhone],
                         inputType: TextInputType.number,
@@ -185,6 +191,7 @@ class WebWidget extends StatelessWidget {
               InputForm(
                 inputFormatters: [controller.maskName],
                 controller: _nomeEC,
+                validator: Validatorless.required('Campo obrigatório'),
                 width: width,
                 label: 'Nome',
               ),
@@ -193,6 +200,7 @@ class WebWidget extends StatelessWidget {
                 inputType: TextInputType.number,
                 inputFormatters: [controller.maskCpf],
                 controller: _documentoEC,
+                validator: Validatorless.required('Campo obrigatório'),
                 width: width,
                 label: 'CPF',
               ),
@@ -200,6 +208,7 @@ class WebWidget extends StatelessWidget {
               InputForm(
                 controller: _dataNascimentoEC,
                 inputType: TextInputType.number,
+                validator: Validatorless.required('Campo obrigatório'),
                 width: width,
                 inputFormatters: [controller.maskDtBirth],
                 label: 'Data de Nascimento',
@@ -207,6 +216,7 @@ class WebWidget extends StatelessWidget {
               HeightSpace(),
               InputForm(
                 controller: _emailEC,
+                validator: Validatorless.required('Campo obrigatório'),
                 width: width,
                 label: 'E-mail',
               ),
@@ -215,6 +225,7 @@ class WebWidget extends StatelessWidget {
                 controller: _telefoneEC,
                 inputFormatters: [controller.maskPhone],
                 inputType: TextInputType.number,
+                validator: Validatorless.required('Campo obrigatório'),
                 width: width,
                 label: 'Telefone',
               ),

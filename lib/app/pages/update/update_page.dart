@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:projeto_jr/app/ui/responsive.dart';
+import 'package:validatorless/validatorless.dart';
 
 import '../../data/controllers/home_controller.dart';
 import '../../data/models/person_model.dart';
@@ -149,6 +150,7 @@ class FormEdit extends StatelessWidget {
         children: [
           HeightSpace(),
           InputForm(
+            validator: Validatorless.required('Campo obrigatório'),
             inputFormatters: [controller.maskName],
             controller: _nomeEC,
             width: width,
@@ -156,6 +158,7 @@ class FormEdit extends StatelessWidget {
           ),
           HeightSpace(),
           InputForm(
+            validator: Validatorless.required('Campo obrigatório'),
             inputType: TextInputType.number,
             inputFormatters: [controller.maskCpf],
             controller: _documentoEC,
@@ -164,6 +167,7 @@ class FormEdit extends StatelessWidget {
           ),
           HeightSpace(),
           InputForm(
+            validator: Validatorless.required('Campo obrigatório'),
             controller: _dataNascimentoEC,
             inputType: TextInputType.number,
             width: width,
@@ -172,12 +176,14 @@ class FormEdit extends StatelessWidget {
           ),
           HeightSpace(),
           InputForm(
+            validator: Validatorless.required('Campo obrigatório'),
             controller: _emailEC,
             width: width,
             label: 'E-mail',
           ),
           HeightSpace(),
           InputForm(
+            validator: Validatorless.required('Campo obrigatório'),
             controller: _telefoneEC,
             inputFormatters: [controller.maskPhone],
             inputType: TextInputType.number,

@@ -10,6 +10,7 @@ class InputForm extends StatelessWidget {
   final TextEditingController? controller;
   final TextInputType? inputType;
   final List<TextInputFormatter>? inputFormatters;
+  final FormFieldValidator<String>? validator;
   final bool senha;
   InputForm({
     Key? key,
@@ -22,6 +23,7 @@ class InputForm extends StatelessWidget {
     this.senha = false,
     this.inputFormatters,
     this.inputType,
+    this.validator,
   }) : super(key: key);
 
   @override
@@ -34,6 +36,7 @@ class InputForm extends StatelessWidget {
         obscureText: senha,
         controller: controller,
         inputFormatters: inputFormatters,
+        validator: validator,
         decoration: InputDecoration(
           focusedBorder: isBorder
               ? OutlineInputBorder(
